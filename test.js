@@ -39,13 +39,11 @@ console.log(comparB(4, '4'));
 //Exercice 4 
 function numberOf(n) {
     if (n % 2 == 0) {
-        for (let i = 0; i < n; i++) {
+        for (let i = 0; i <= n; i++) {
             if (i % 2 == 0) {
-                return i;
+                console.log(i);
             }
         }
-    } else {
-
     }
 }
-console.log(numberOf(6));
+numberOf(10);
