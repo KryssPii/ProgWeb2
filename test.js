@@ -30,8 +30,8 @@ console.log(comparA(4.0, 4));
 function comparB(a, b) {
     if (typeof a === "number" && typeof b === "number") {
         // x et y sont égaux (peut être -0 et 0) ou sont tous les deux NaN
-        return (x !== x && y !== y);
+        return a === b || (a !== a && b !== b);
     }
-    return (x, y)(x === y);
+    return (a, b)(a === b);
 }
-console.log(comparA(4.0, 'quatre'));
+console.log(comparB(4, '4'));
