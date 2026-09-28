@@ -44,6 +44,43 @@ function numberOf(n) {
                 console.log(i);
             }
         }
+    } else if (n % 7 == 0) {
+        for (let i = 0; i <= n; i++) {
+            if (i % 7 == 0) {
+                console.log(i);
+            }
+        }
+    } else if (n % 7 == 0 || (n % 2 == 0 && n % 3 == 0)) {
+        for (let i = 0; i <= n; i++) {
+            if (n % 7 == 0 || (n % 2 == 0 && n % 3 == 0)) {
+                console.log(i);
+            }
+        }
     }
 }
-numberOf(10);
+numberOf(5);
+//Exercice 5 
+function compteurPile(n) {
+    let counter = 0;
+    for (let i = 0; i < n; i++) {
+        if (Math.random() < 0.5) {
+            counter++;
+        }
+    }
+    return counter;
+}
+console.log(compteurPile(8));
+
+function compteurPileFace(n) {
+    let pile = 0;
+    let face = 0;
+    for (let i = 0; i < n; i++) {
+        if (Math.random() < 0.5) {
+            pile++;
+        } else {
+            face++;
+        }
+    }
+    return { pile, face };
+}
+console.log(compteurPileFace(5));
