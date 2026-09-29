@@ -83,7 +83,7 @@ function compteurPileFace(n) {
     }
     return { pile, face };
 }
-console.log(compteurPileFace(5));
+console.log(compteurPileFace(10));
 //Exercice 6 
 function estPremier(n) {
     if (n <= 1) {
@@ -91,15 +91,28 @@ function estPremier(n) {
 
     }
     for (let i = 2; i <= Math.sqrt(n); i++) {
-        if (n % i === 0) {
-            return false;
-        }
+        return (n % i === 0);
     }
-    return true;
+
 }
 console.log(estPremier(0));
 console.log(estPremier(1));
-console.log(estPremier(2));
-console.log(estPremier(3));
 console.log(estPremier(4));
 console.log(estPremier(87178291197));
+console.log(estPremier(87178291199));
+
+//Exercice 8 
+
+function double(n) {
+    return n * 2;
+
+}
+function square(n) {
+    return n ** 2;
+}
+
+function transform(n, fct) {
+    return fct(n);
+}
+console.log(transform(5, double));
+console.log(transform(7, square));
